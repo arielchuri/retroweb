@@ -15,7 +15,7 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = process.env.PORT || 1996;
+const PORT = process.env.PORT || 8088;
 
 // Directories
 const publicDir = path.resolve(__dirname, '../public');
