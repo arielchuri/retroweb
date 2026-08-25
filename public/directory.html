@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RetroWeb — Community Gallery & Directory</title>
+  <link rel="stylesheet" href="/netscape.css">
+</head>
+<body>
+
+<div class="window-frame">
+  <div class="title-bar">
+    <span>🌐 Netscape Navigator — [Community Directory]</span>
+    <span>[ _ | 🗖 | ✕ ]</span>
+  </div>
+
+  <div class="toolbar">
+    <a href="/" class="toolbar-btn">🏠 Home</a>
+    <a href="/directory" class="toolbar-btn">📖 Directory</a>
+    <a href="/surf" class="toolbar-btn">🏄 Random Site</a>
+    <a href="/dashboard" class="toolbar-btn">📁 My Files</a>
+    <a href="/login" class="toolbar-btn">🔑 Account</a>
+  </div>
+
+  <div class="location-bar">
+    <span>Netsite:</span>
+    <input type="text" class="location-input" value="http://www.retroweb.site/directory" readonly>
+  </div>
+
+  <div class="content-pane">
+    <h1>📖 The RetroWeb Neighborhood Directory</h1>
+    <p>Discover real websites made by real people. Zero JavaScript, 100% human-crafted.</p>
+
+    <p align="right">
+      <a href="/surf" class="btn">🎲 Jump to Random Site</a>
+    </p>
+
+    <table class="retro-table">
+      <thead>
+        <tr>
+          <th width="25%">Site Title / URL</th>
+          <th width="20%">Author</th>
+          <th width="40%">Description</th>
+          <th width="15%">Updated</th>
+        </tr>
+      </thead>
+      <tbody id="directory-rows">
+        <!-- Server-rendered or populated by template -->
+        <tr>
+          <td><a href="/u/ariel/"><b>Ariel's Garden</b></a></td>
+          <td>~ariel</td>
+          <td>Notes on teaching, design, local hardware, and retro-computing.</td>
+          <td>Aug 2026</td>
+        </tr>
+        <tr>
+          <td><a href="/u/cybersmith/"><b>The Cyber Forge</b></a></td>
+          <td>~cybersmith</td>
+          <td>Hand-coded HTML templates and 8-bit pixel art gallery.</td>
+          <td>Aug 2026</td>
+        </tr>
+        <tr>
+          <td><a href="/u/stargazer/"><b>Stargazer Journal</b></a></td>
+          <td>~stargazer</td>
+          <td>Astronomy logs, telescope schematics, and nighttime sketches.</td>
+          <td>Aug 2026</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="notice-box">
+      <b>Want your site listed here?</b><br>
+      Create an account, upload your <code>index.html</code>, and your site will automatically join the neighborhood!
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <span>Showing verified community sites</span>
+    <span>Total Members: 3</span>
+  </div>
+</div>
+
+</body>
+</html>

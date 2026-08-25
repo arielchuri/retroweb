@@ -1,0 +1,241 @@
+/* Netscape Navigator 3.0 / 4.0 Authentic CSS Theme */
+
+:root {
+  --win-bg: #c0c0c0;
+  --win-light: #ffffff;
+  --win-dark: #808080;
+  --win-darker: #404040;
+  --win-blue: #000080;
+  --win-blue-light: #1084d0;
+  --link-blue: #0000ee;
+  --link-visited: #551a8b;
+  --link-active: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--win-bg);
+  color: #000000;
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 12px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 24px;
+  border-bottom: 2px solid var(--win-dark);
+  padding-bottom: 4px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+a:link { color: var(--link-blue); text-decoration: underline; }
+a:visited { color: var(--link-visited); text-decoration: underline; }
+a:active { color: var(--link-active); text-decoration: underline; }
+
+/* 3D Bevel Containers */
+.window-frame {
+  background-color: var(--win-bg);
+  border: 3px outset var(--win-light);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  max-width: 860px;
+  margin: 0 auto 16px auto;
+}
+
+.title-bar {
+  background: linear-gradient(90deg, var(--win-blue), var(--win-blue-light));
+  color: #ffffff;
+  padding: 3px 6px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar {
+  background-color: var(--win-bg);
+  border-bottom: 2px groove var(--win-light);
+  padding: 3px 6px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.menu-bar a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 12px;
+  padding: 2px 4px;
+}
+
+.menu-bar a:hover {
+  background-color: var(--win-blue);
+  color: #ffffff;
+}
+
+.toolbar {
+  background-color: var(--win-bg);
+  border-bottom: 2px groove var(--win-light);
+  padding: 6px 8px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.toolbar-btn {
+  background-color: var(--win-bg);
+  border: 2px outset var(--win-light);
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 12px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.toolbar-btn:active {
+  border: 2px inset var(--win-light);
+  padding: 5px 7px 3px 9px;
+}
+
+.location-bar {
+  background-color: var(--win-bg);
+  border-bottom: 2px groove var(--win-light);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.location-input {
+  background-color: #ffffff;
+  border: 2px inset var(--win-dark);
+  padding: 2px 6px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  flex: 1;
+}
+
+.content-pane {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px inset var(--win-dark);
+  padding: 16px;
+  margin: 6px;
+  min-height: 380px;
+}
+
+/* Retro Controls & Forms */
+.btn {
+  background-color: var(--win-bg);
+  border: 2px outset var(--win-light);
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.btn:active {
+  border: 2px inset var(--win-light);
+}
+
+.input-field {
+  background-color: #ffffff;
+  border: 2px inset var(--win-dark);
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+.status-bar {
+  background-color: var(--win-bg);
+  border-top: 2px groove var(--win-light);
+  padding: 3px 8px;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+}
+
+/* Classic Tables */
+table.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+table.retro-table th {
+  background-color: var(--win-bg);
+  border: 2px outset var(--win-light);
+  padding: 6px;
+  text-align: left;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+}
+
+table.retro-table td {
+  border: 1px solid var(--win-dark);
+  padding: 6px 8px;
+  background-color: #ffffff;
+}
+
+/* Retro Badges & Callouts */
+.badge-box {
+  background-color: #ffffcc;
+  border: 2px solid #cccc00;
+  padding: 8px 12px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.notice-box {
+  background-color: var(--win-bg);
+  border: 2px groove var(--win-light);
+  padding: 10px;
+  margin: 12px 0;
+}
+
+.webring-bar {
+  border: 2px ridge var(--win-light);
+  background-color: var(--win-bg);
+  padding: 8px;
+  text-align: center;
+  margin: 16px 0;
+  font-family: "MS Sans Serif", Arial, sans-serif;
+  font-size: 13px;
+}
+
+hr.retro {
+  border: 0;
+  height: 2px;
+  background-color: var(--win-dark);
+  border-bottom: 1px solid var(--win-light);
+  margin: 16px 0;
+}

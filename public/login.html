@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RetroWeb — Account Access</title>
+  <link rel="stylesheet" href="/netscape.css">
+</head>
+<body>
+
+<div class="window-frame" style="max-width: 520px;">
+  <div class="title-bar">
+    <span>🌐 Netscape Navigator — [Account Login / Register]</span>
+    <span>[ _ | 🗖 | ✕ ]</span>
+  </div>
+
+  <div class="toolbar">
+    <a href="/" class="toolbar-btn">🏠 Home</a>
+    <a href="/directory" class="toolbar-btn">📖 Directory</a>
+  </div>
+
+  <div class="content-pane" style="min-height: 280px;">
+    <h2>🔑 Log In / Create Account</h2>
+    <p>Sign in to manage your static files or create your neighborhood account.</p>
+
+    <form method="POST" action="/api/auth/login">
+      <table cellpadding="6" style="margin-bottom: 12px;">
+        <tr>
+          <td><b>Username:</b></td>
+          <td><input type="text" name="username" class="input-field" required placeholder="e.g. alice" pattern="[a-zA-Z0-9_-]+"></td>
+        </tr>
+        <tr>
+          <td><b>Password:</b></td>
+          <td><input type="password" name="password" class="input-field" required></td>
+        </tr>
+      </table>
+
+      <div class="notice-box" style="font-size:12px;">
+        <b>💡 New here?</b> Simply enter your desired username & password and click Register. (One-time donation of $3+ activates your public live URL).
+      </div>
+
+      <p>
+        <button type="submit" name="action" value="login" class="btn">Log In</button> &nbsp;
+        <button type="submit" name="action" value="register" class="btn">Register New Account</button>
+      </p>
+    </form>
+  </div>
+
+  <div class="status-bar">
+    <span>Security: Encrypted Session</span>
+    <span>Host: retroweb.site</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RetroWeb — File Manager & Dashboard</title>
+  <link rel="stylesheet" href="/netscape.css">
+</head>
+<body>
+
+<div class="window-frame">
+  <div class="title-bar">
+    <span>🌐 Netscape Navigator — [File Manager: %%USERNAME%%]</span>
+    <span>[ _ | 🗖 | ✕ ]</span>
+  </div>
+
+  <div class="toolbar">
+    <a href="/" class="toolbar-btn">🏠 Home</a>
+    <a href="/directory" class="toolbar-btn">📖 Directory</a>
+    <a href="/surf" class="toolbar-btn">🏄 Random Site</a>
+    <a href="/u/%%USERNAME%%/" class="toolbar-btn" target="_blank">🌐 View My Site</a>
+    <a href="/api/auth/logout" class="toolbar-btn">🚪 Log Out</a>
+  </div>
+
+  <div class="location-bar">
+    <span>Location:</span>
+    <input type="text" class="location-input" value="http://%%USERNAME%%.retroweb.site/" readonly>
+  </div>
+
+  <div class="content-pane">
+    <h1>📁 File Manager (~%%USERNAME%%)</h1>
+    <p>
+      Your public live URL: <a href="/u/%%USERNAME%%/" target="_blank"><b>http://%%USERNAME%%.retroweb.site/</b></a>
+    </p>
+
+    <!-- Upload Form -->
+    <fieldset style="border: 2px groove #ffffff; padding: 12px; margin-bottom: 16px;">
+      <legend><b>📤 Upload New File (HTML, CSS, Images only)</b></legend>
+      <form method="POST" action="/api/files/upload" enctype="multipart/form-data">
+        <p>
+          <input type="file" name="files" multiple required>
+        </p>
+        <p>
+          <button type="submit" class="btn">🚀 Upload & Publish</button>
+        </p>
+        <div style="font-size:12px; color:#555;">
+          * Note: All HTML files are strictly scanned. Any <code>&lt;script&gt;</code> tags or inline JavaScript will be rejected automatically.
+        </div>
+      </form>
+    </fieldset>
+
+    <!-- File Table -->
+    <h2>Your Hosted Files</h2>
+    <table class="retro-table">
+      <thead>
+        <tr>
+          <th width="45%">Filename</th>
+          <th width="20%">Size</th>
+          <th width="20%">Updated</th>
+          <th width="15%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        %%FILE_ROWS%%
+      </tbody>
+    </table>
+
+    <hr class="retro">
+
+    <!-- Webring Badge Snippet -->
+    <h3>Webring Snippet for Your Site</h3>
+    <p>Paste this HTML into your <code>index.html</code> footer to join the random surfer webring:</p>
+    <textarea style="width:100%; height:75px; font-family:'Courier New', monospace; font-size:12px; background:#f4f4f4; border:2px inset #808080;" readonly>
+<div align="center" style="margin:20px; font-family:sans-serif; font-size:13px;">
+  [ <a href="https://retroweb.site/surf">← Random Neighbor Site →</a> ]
+</div></textarea>
+  </div>
+
+  <div class="status-bar">
+    <span>Storage Quota: Used %%USED_STORAGE%% of 10.0 MB</span>
+    <span>Zero JavaScript Enforced</span>
+  </div>
+</div>
+
+</body>
+</html>
